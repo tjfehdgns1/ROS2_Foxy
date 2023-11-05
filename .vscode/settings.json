@@ -1,0 +1,9 @@
+{
+    "ros.distro": "foxy",
+    "colcon.provideTasks": true,
+    "files.associations": {
+    "*.repos": "yaml",
+    "*.world": "xml",
+    "*.xacro": "xml"
+    }
+}
