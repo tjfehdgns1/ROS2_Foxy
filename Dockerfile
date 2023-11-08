@@ -15,7 +15,8 @@ RUN apt-get install -y \
     python3-setuptools \
     python3-vcstool \
     wget \
-    tmux
+    tmux \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN python3 -m pip install -U \
     argcomplete \
