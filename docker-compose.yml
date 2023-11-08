@@ -1,0 +1,18 @@
+#version: 
+services:
+
+  ros:
+    container_name: ros2_foxy
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/root/robot_ws
+    ports:
+      - "11311:11311"
+    command:
+      - roscore
+    tty: true
+    environment:
+      - ROS_MASTER_URI=http://localhost:11311
+      - DISPLAY=host.docker.internal=0.0
